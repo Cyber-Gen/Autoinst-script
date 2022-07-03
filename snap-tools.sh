@@ -13,9 +13,7 @@ set -e
 #
 ########################################################################################
 
-# Tools from default repos
-sudo apt install -y git curl apt-transport-https openssl ca-certificates gnupg lsb-release ufw code-oss timeshift snapd docker.io
-sudo systemctl enable --now snapd apparmor docker
-sudo usermod -aG docker $USER
+# Snap tools 
+sudo snap install bitwarden
 
-echo "............................Basic tools INSTALLED"
+echo "............................Snap tools INSTALLED"

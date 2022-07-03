@@ -13,9 +13,9 @@ set -e
 #
 ########################################################################################
 
-# Tools from default repos
-sudo apt install -y git curl apt-transport-https openssl ca-certificates gnupg lsb-release ufw code-oss timeshift snapd docker.io
-sudo systemctl enable --now snapd apparmor docker
-sudo usermod -aG docker $USER
+# NordVPN
+sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
+sudo usermod -aG nordvpn $USER
 
-echo "............................Basic tools INSTALLED"
+
+echo "............................Other tools INSTALLED"

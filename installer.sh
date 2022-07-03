@@ -20,8 +20,14 @@ sudo apt -y full-upgrade -y
 echo "Removing unused packages..."
 sudo apt autoremove -y
 
-echo "Starting install process..."
+echo "Starting installing Basic Tools..."
 sh basic-tools.sh
+echo "Starting installing Pentest Tools..."
+sh pentest-tools.sh
+echo "Starting installing Snap Tools..."
+sh snap-tools.sh
+echo "Starting installing Other Tools..."
+sh other-tools.sh
 
 echo "Checking for broken packages and fixing them...."
 sudo apt install -f -y
